@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A little something for you ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<button id="music" class="music" type="button" aria-pressed="false" hidden>♪ music</button>
+
+<!-- ============ SCENE 1: OPENING ============ -->
+<!-- Background photo: assets/photos/hero.jpg (falls back to a twilight gradient if missing) -->
+<section class="scene night hero" id="s1" data-bg="assets/photos/hero.jpg">
+  <div class="stars"></div>
+  <div class="wrap center">
+    <h1 class="hand big">Okay, I'm late. I know.</h1>
+    <p>But some things deserve their own little moment, so… I made you something.</p>
+    <p class="note tilt-l">A belated birthday gift for someone who has become a little too special to me ♡</p>
+    <button class="btn" id="open-gift" type="button">Open your gift →</button>
+  </div>
+</section>
+
+<main id="story" hidden>
+
+<!-- ============ SCENE 2: ENVELOPE ============ -->
+<section class="scene cream" id="s2">
+  <div class="wrap center">
+    <button class="envelope" id="envelope" type="button" aria-expanded="false" aria-label="Open the envelope">
+      <span class="flap"></span><span class="seal">♡</span><span class="env-hint hand">tap to open</span>
+    </button>
+    <article class="letter paper" id="letter1" hidden>
+      <!-- EDIT: birthday message -->
+      <p class="hand big">Happy belated birthday, <span class="nick">APACHI</span> ♡</p>
+      <p>Haan, birthday nikal gaya. Main late hoon. Case closed.</p>
+      <p>But tumhare liye kuch cute sa banana tha, toh here we are.</p>
+      <p>I hope this year gives you more reasons to smile, more peaceful days, more little adventures, and all the happiness you deserve.</p>
+      <p class="hand">Scroll down, there's more… ↓</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SCENE 3: THINGS THAT MAKE YOU, YOU ============ -->
+<section class="scene lav" id="s3">
+  <div class="wrap">
+    <h2 class="hand big">Little things that make you, you</h2>
+    <p class="sub">Tap a card. They're small. They're true-ish.</p>
+    <div class="cards">
+      <!-- EDIT: card title (front) and message (back) -->
+      <button class="flip tilt-l" type="button"><b>Your ridiculously cute side</b><span class="more hand">Yeah, that one. You know which one. ♡</span></button>
+      <button class="flip tilt-r" type="button"><b>Ordinary conversations, made special</b><span class="more hand">Even the "kya kar rahi ho" ones. Somehow.</span></button>
+      <button class="flip tilt-l" type="button"><b>Your adorable little habits</b><span class="more hand">I'm still collecting them. Slowly. Happily.</span></button>
+      <button class="flip tilt-r" type="button"><b>The lovable side you don't notice</b><span class="more hand">Pata hai, you'd be surprised.</span></button>
+      <button class="flip tilt-l" type="button"><b>How you make me smile without trying</b><span class="more hand">Unfair, honestly. Zero effort, full effect.</span></button>
+    </div>
+    <div class="polaroids two">
+      <figure class="polaroid tilt-l" data-src="candid-01.jpeg" data-alt="A photo of her" data-pos="50% 25%"><figcaption class="hand">this one is so you ♡</figcaption></figure>
+      <figure class="polaroid tilt-r" data-src="candid-02.jpeg" data-alt="Another photo of her" data-pos="50% 25%"><figcaption class="hand">a little moment worth keeping</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 4: CERTIFIED CUTIE REPORT ============ -->
+<section class="scene cream" id="s4">
+  <div class="wrap">
+    <div class="report paper">
+      <h2 class="hand big">The Certified Cutie Report</h2>
+      <p class="sub">Scientific analysis. 100% biased.</p>
+      <!-- EDIT: data-w is the bar fill (0-100) -->
+      <div class="meter"><label>Cuteness level <em>Unreasonably high</em></label><div class="bar"><i data-w="97"></i></div></div>
+      <div class="meter"><label>Ability to distract me <em>Critical</em></label><div class="bar"><i data-w="92"></i></div></div>
+      <div class="meter"><label>Being achhi without trying <em>Off the charts</em></label><div class="bar"><i data-w="100"></i></div></div>
+      <div class="meter"><label>Making me smile <em>Suspiciously effective</em></label><div class="bar"><i data-w="95"></i></div></div>
+      <div class="stamps"><span class="stamp s1">Certified Cutie</span><span class="stamp s2">Dangerously Adorable</span><span class="stamp s3">Should Be Illegal</span></div>
+      <p class="hand fine">Scientific accuracy: questionable. Personal bias: undeniable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 5: THINGS I HAVEN'T TOLD YOU PROPERLY ============ -->
+<section class="scene warm" id="s5">
+  <div class="wrap">
+    <h2 class="hand big">Things I haven't told you properly</h2>
+    <article class="paper letter reveal" id="letter2">
+      <!-- EDIT: each <p> appears one by one -->
+      <p class="hand"><span class="nick">APACHI</span>,</p>
+      <p>I don't know when our conversations started meaning this much to me.</p>
+      <p>Somewhere along the way, talking to you became one of those little things I look forward to.</p>
+      <p>You're cute. Annoyingly cute, actually.</p>
+      <p>But it's not just that.</p>
+      <p>There's something about you as a person that makes me want to know you more, understand you better, and be around for more of your little moments.</p>
+      <p>Kabhi kabhi I catch myself smiling at my screen like an idiot.</p>
+      <p>So, um… thanks for that. 🙄♡</p>
+    </article>
+    <button class="btn ghost" id="show-all" type="button">Show the whole letter</button>
+  </div>
+</section>
+
+<!-- ============ SCENE 6: ALMOST-CONFESSION ============ -->
+<section class="scene night" id="s6" data-bg="assets/photos/soft.jpg">
+  <div class="stars"></div><div class="moon" aria-hidden="true"></div>
+  <div class="wrap center quiet">
+    <p>There's something I want to tell you but.</p>
+    <p>Sometimes not saying ahything helps a lot.</p>
+    
+    <p>I'd rather say SHADAPP ABD STOP SMILING.</p>
+    <p>So, for now, I'll just say this:</p>
+    <p class="hand big glow">I'm really, really glad I got to know you.</p>
+    <button class="btn" id="one-more" type="button">One last thing… ♡</button>
+  </div>
+</section>
+
+<!-- ============ SCENE 7: TINY REVEAL (dialog) ============ -->
+<dialog id="tiny" class="paper pop" aria-labelledby="tiny-t">
+  <svg viewBox="0 0 80 60" width="90" aria-hidden="true"><path d="M12 54V22l10 8h36l10-8v32z" fill="#E5D8F5" stroke="#493747" stroke-width="3" stroke-linejoin="round"/><circle cx="29" cy="38" r="2.5" fill="#493747"/><circle cx="51" cy="38" r="2.5" fill="#493747"/><path d="M36 44q4 4 8 0" fill="none" stroke="#493747" stroke-width="2.5" stroke-linecap="round"/></svg>
+  <p class="hand big" id="tiny-t">And yes…</p>
+  <p>You're still ridiculously cute.<br>Unfortunately for my peace of mind.</p>
+  <p class="hand"><span class="nick">Puranpoli</span> / <span class="nick">Butki</span> / <span class="nick">APACHI</span> — identity crisis, but make it adorable.</p>
+  <button class="btn" id="tiny-close" type="button">Continue ↓</button>
+</dialog>
+
+<!-- ============ SCENE 8: MOMENTS (gallery) ============ -->
+<!-- EDIT: add/remove figures. Click a photo to enlarge. -->
+<section class="scene cream" id="s8">
+  <div class="wrap">
+    <h2 class="hand big">Little moments, kept close</h2>
+    <div class="gallery">
+      <figure class="polaroid tilt-l" data-src="moment-01.jpeg" data-alt="Photo of her" data-pos="50% 20%"><figcaption class="hand">one of my favourite pictures</figcaption></figure>
+      <figure class="polaroid tilt-r" data-src="moment-02.jpeg" data-alt="Photo of her" data-pos="50% 20%"><figcaption class="hand">you look so effortlessly cute here</figcaption></figure>
+      <figure class="polaroid tilt-l" data-src="moment-03.jpeg" data-alt="Photo of her" data-pos="50% 20%"><figcaption class="hand">this one is so you ♡</figcaption></figure>
+      <figure class="polaroid tilt-r" data-src="moment-04.jpeg" data-alt="Photo of her" data-pos="50% 20%"><figcaption class="hand">a little moment worth keeping</figcaption></figure>
+    </div>
+  </div>
+</section>
+<dialog id="lightbox" aria-label="Photo viewer"><button id="lb-close" type="button" aria-label="Close photo">✕</button><img id="lb-img" alt=""><p class="hand" id="lb-cap"></p></dialog>
+
+<!-- ============ SCENE 9: WHY YOU ============ -->
+<section class="scene blush" id="s9">
+  <div class="wrap">
+    <h2 class="hand big">Why you?</h2>
+    <ul class="plain">
+      <li>You're kind, even when you don't think you are.</li>
+      <li>You're brave in ways you might not realize.</li>
+      <li>You make ordinary things feel lighter.</li>
+      <li>You care deeply.</li>
+      <li>You deserve kindness, including from yourself.</li>
+      <li>You're you. And that's enough.</li>
+    </ul>
+    <p class="note pinkn tilt-r hand">Honestly… I just really like you. ♡</p>
+  </div>
+</section>
+
+<!-- ============ SCENE 10: LITTLE DETAILS ============ -->
+<!-- EDIT: replace these with real inside jokes -->
+<section class="scene cream" id="s10">
+  <div class="wrap">
+    <h2 class="hand big">The little details</h2>
+    <div class="stickies">
+      <p class="sticky c1 tilt-l hand">Your random "SONGS" </p>
+      <p class="sticky c2 tilt-r hand">The way you type sometimes</p>
+      <p class="sticky c3 tilt-r hand">Your food opinions, especially anything you like.</p>
+      <p class="sticky c4 tilt-l hand">The way you overthink but keep going</p>
+      <p class="sticky c5 tilt-l hand">Your expressions, so real, so you</p>
+      <p class="sticky c1 tilt-r hand">The fact that you're just… you ♡</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 11: QUIET MOMENT ============ -->
+<section class="scene warmphoto" id="s11" data-bg="assets/photos/quiet.jpg">
+  <div class="wrap center quiet">
+    <p class="hand big">You make life feel softer, prettier, and kinder.</p>
+    <p class="hand">Thank you for being you. ♡</p>
+  </div>
+</section>
+
+<!-- ============ SCENE 12: FUTURE, NO PRESSURE ============ -->
+<section class="scene lav" id="s12">
+  <div class="wrap">
+    <article class="paper letter">
+      <p>I don't know exactly what's next.</p>
+      <p>But I do know this: I'd like more conversations, more laughs, more random moments, more you.</p>
+      <p>And when the right time comes, I hope we get to say all the things we've been almost saying.</p>
+      <p>For now, I'll keep being here. Cheering for you. Rooting for you. And being a little achaa more more obsessed with you.</p>
+      <p>Yes, I mean it. Thoda sa hi. Maybe.</p>
+      <p class="hand big center">you + me on virtual date ?</p>
+      <p class="hand center">no rush ♡</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SCENE 13: LITTLE PROMISE ============ -->
+<section class="scene cream" id="s13">
+  <div class="wrap center">
+    <p class="hand big">I'm not perfect.</p>
+    <p>But I'll try to be honest with you, be there for you, make you laugh, and respect what we both want, in every version of this story that we choose together.</p>
+    <p class="note tilt-l hand">Because you're worth it. ♡</p>
+  </div>
+</section>
+
+<!-- ============ SCENE 14: RANDOM THOUGHTS ============ -->
+<section class="scene blush" id="s14">
+  <div class="wrap">
+    <h2 class="hand big">Random thoughts</h2>
+    <ul class="plain hand eq">
+      <li>You + me = conversations I look forward to</li>
+      <li>You being happy = genuinely good news</li>
+      <li>Me trying to act normal about you = failed successfully</li>
+      <li>You + this website = proof that I overthink</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SCENE 15: FINAL ============ -->
+<section class="scene night final" id="s15" data-bg="assets/photos/final.jpg">
+  <div class="stars"></div>
+  <div class="wrap center">
+    <h2 class="hand huge">Happy Belated Birthday, <span class="nick">APACHI</span> ♡</h2>
+    <p>Thanks for existing.<br>And for somehow becoming one of my favourite people.</p>
+    <p>I hope this year is gentle with you, and gives you a hundred reasons to smile.</p>
+    <p class="hand big">your (almost) favourite person ♡</p>
+    <button class="btn" id="restart" type="button">Start again ♡</button>
+  </div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
